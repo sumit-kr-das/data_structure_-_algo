@@ -6,21 +6,24 @@ using namespace std;
 
 int searchEle(vector<int> arr, int ele){
     int start = 0;
-    int end = arr.size();
-    int mid = start + ((end-start)/2);
+    int end = arr.size()-1;
+    while(start<=end){
+        int mid = start + ((end-start)/2);
+        if(ele == arr[mid]){
+            return mid;
+        }
+        if((mid-1) >= start && arr[mid-1] == ele){
+            return mid-1;
+        }
+        if((mid+1) <= end && arr[mid+1] == ele){
+            return mid+1;
+        }
 
-    if(ele == arr[mid]){
-        return mid;
-    }else if((mid-1) >= start && arr[mid-1] == ele){
-        return mid-1;
-    }else if((mid+1) <= end && arr[mid+1] == ele){
-        return mid+1;
-    }
-
-    if(ele <= arr[mid-2]){
-        end = mid-2;
-    }else if(ele >= arr[mid+2]){
-        start = mid+2;
+        if(ele <= arr[mid-2]){
+            end = mid-2;
+        }else if(ele >= arr[mid+2]){
+            start = mid+2;
+        }
     }
     return -1;
 }
