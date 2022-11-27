@@ -11,8 +11,7 @@
 - ```erase()``` - It deletes the specified element.
 - ```resize()``` - It modifies the size of the vector.
 - ```clear()``` - It removes all the elements from the vector.
-- ```size()``` - It determines a number of elements in the vector.
-<br />
+- ```size()``` - It determines a number of elements in the vector.<br />
 #### The functions associated with ```stack``` are: 
 - ```empty()``` – Returns whether the stack is empty – Time Complexity : O(1) 
 - ```size()``` – Returns the size of the stack – Time Complexity : O(1) 
