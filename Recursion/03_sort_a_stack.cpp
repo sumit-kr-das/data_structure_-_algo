@@ -15,7 +15,6 @@ void insert(int temp, stack<int> &s){
 
 void sort(stack<int> &s){
     if(s.size()==1) return;
-    
     int temp = s.top();
     s.pop();
     sort(s);
@@ -30,14 +29,10 @@ int main(){
         cin>>ele;
         s.push(ele);
     }
-    
-    
     sort(s);
-    
     while(!s.empty()){
         cout<<s.top()<<" ";
         s.pop();
     }
-    
     return 0;
 }
