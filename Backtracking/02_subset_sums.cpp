@@ -3,7 +3,7 @@ class solution
 private:
     void solve(int index, int sum, vector<int> &arr, int N, vector<int> &ans)
     {
-        if (index >= N)
+        if (index = N) // It will only equals to instead of greater than equal to, not interviewer ask questions related to this 
         {
             ans.push_back(sum);
             return;
