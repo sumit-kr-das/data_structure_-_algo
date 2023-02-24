@@ -22,7 +22,7 @@ class Tree {
             cin>>data;
             root = new node(data);
 
-            if(data == -1){
+            if(data == -1){ 
                 return NULL;
             }
 
@@ -38,7 +38,7 @@ class Tree {
         void levelOrderTraversal(node* root) {
             queue<node*> q;
             q.push(root);
-
+            
             while(!q.empty()){
                 node* temp = q.front();
                 cout<<temp -> data<<" ";
